@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3AFDC39C22C037EC00B77841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC39B22C037EC00B77841 /* AppDelegate.swift */; };
-		3AFDC39E22C037EC00B77841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC39D22C037EC00B77841 /* ViewController.swift */; };
 		3AFDC3A122C037EC00B77841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDC39F22C037EC00B77841 /* Main.storyboard */; };
 		3AFDC3A422C037EC00B77841 /* Assessment2take2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3A222C037EC00B77841 /* Assessment2take2.xcdatamodeld */; };
 		3AFDC3A622C037ED00B77841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDC3A522C037ED00B77841 /* Assets.xcassets */; };
 		3AFDC3A922C037ED00B77841 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDC3A722C037ED00B77841 /* LaunchScreen.storyboard */; };
+		3AFDC3B422C0396100B77841 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3B322C0396100B77841 /* CoreDataStack.swift */; };
+		3AFDC3B722C0398E00B77841 /* List+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3B622C0398E00B77841 /* List+Convenience.swift */; };
+		3AFDC3B922C03A1C00B77841 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3B822C03A1C00B77841 /* ListController.swift */; };
+		3AFDC3BB22C03EED00B77841 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3BA22C03EED00B77841 /* ListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3AFDC39822C037EC00B77841 /* Assessment2take2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assessment2take2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFDC39B22C037EC00B77841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AFDC39D22C037EC00B77841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3AFDC3A022C037EC00B77841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AFDC3A322C037EC00B77841 /* Assessment2take2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Assessment2take2.xcdatamodel; sourceTree = "<group>"; };
 		3AFDC3A522C037ED00B77841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AFDC3A822C037ED00B77841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AFDC3AA22C037ED00B77841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AFDC3B322C0396100B77841 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		3AFDC3B622C0398E00B77841 /* List+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Convenience.swift"; sourceTree = "<group>"; };
+		3AFDC3B822C03A1C00B77841 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		3AFDC3BA22C03EED00B77841 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		3AFDC39A22C037EC00B77841 /* Assessment2take2 */ = {
 			isa = PBXGroup;
 			children = (
+				3AFDC3B222C038D100B77841 /* Views */,
+				3AFDC3BC22C03EF300B77841 /* View Controllers */,
+				3AFDC3B122C038CB00B77841 /* Models */,
+				3AFDC3B022C038C000B77841 /* Resources */,
+				3AFDC3B522C0396500B77841 /* Model Controllers */,
+			);
+			path = Assessment2take2;
+			sourceTree = "<group>";
+		};
+		3AFDC3B022C038C000B77841 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				3AFDC39B22C037EC00B77841 /* AppDelegate.swift */,
-				3AFDC39D22C037EC00B77841 /* ViewController.swift */,
-				3AFDC39F22C037EC00B77841 /* Main.storyboard */,
 				3AFDC3A522C037ED00B77841 /* Assets.xcassets */,
 				3AFDC3A722C037ED00B77841 /* LaunchScreen.storyboard */,
 				3AFDC3AA22C037ED00B77841 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3AFDC3B122C038CB00B77841 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDC3B622C0398E00B77841 /* List+Convenience.swift */,
+				3AFDC3B322C0396100B77841 /* CoreDataStack.swift */,
 				3AFDC3A222C037EC00B77841 /* Assessment2take2.xcdatamodeld */,
 			);
-			path = Assessment2take2;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3AFDC3B222C038D100B77841 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDC39F22C037EC00B77841 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3AFDC3B522C0396500B77841 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDC3B822C03A1C00B77841 /* ListController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		3AFDC3BC22C03EF300B77841 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AFDC3BA22C03EED00B77841 /* ListTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFDC39E22C037EC00B77841 /* ViewController.swift in Sources */,
+				3AFDC3B422C0396100B77841 /* CoreDataStack.swift in Sources */,
+				3AFDC3B922C03A1C00B77841 /* ListController.swift in Sources */,
+				3AFDC3B722C0398E00B77841 /* List+Convenience.swift in Sources */,
+				3AFDC3BB22C03EED00B77841 /* ListTableViewController.swift in Sources */,
 				3AFDC3A422C037EC00B77841 /* Assessment2take2.xcdatamodeld in Sources */,
 				3AFDC39C22C037EC00B77841 /* AppDelegate.swift in Sources */,
 			);
@@ -288,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = Assessment2take2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Assessment2take2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = Assessment2take2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Assessment2take2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
