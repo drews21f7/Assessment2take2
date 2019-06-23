@@ -12,13 +12,13 @@
         <!--Root View Controller-->
         <scene sceneID="YnR-zq-v4h">
             <objects>
-                <tableViewController id="96H-Hw-HJl" sceneMemberID="viewController">
+                <tableViewController id="96H-Hw-HJl" customClass="ListTableViewController" customModule="Assessment2take2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cIo-h5-KAB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="ngs-y4-aHh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" rowHeight="52" id="ngs-y4-aHh" customClass="ButtonTableViewCell" customModule="Assessment2take2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ngs-y4-aHh" id="YVx-Ix-8ko">
@@ -29,6 +29,9 @@
                                             <rect key="frame" x="361" y="8" width="33" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="incomplete"/>
+                                            <connections>
+                                                <action selector="checkedButtonTapped:" destination="ngs-y4-aHh" eventType="touchUpInside" id="XCv-AH-fQ6"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmd-Es-DDj">
                                             <rect key="frame" x="20" y="11" width="60" height="30"/>
@@ -39,6 +42,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkedButton" destination="uhW-uL-MHO" id="lNx-Gq-DC3"/>
+                                    <outlet property="itemLabel" destination="Cmd-Es-DDj" id="MaN-gp-24d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

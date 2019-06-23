@@ -16,6 +16,7 @@
 		3AFDC3B722C0398E00B77841 /* List+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3B622C0398E00B77841 /* List+Convenience.swift */; };
 		3AFDC3B922C03A1C00B77841 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3B822C03A1C00B77841 /* ListController.swift */; };
 		3AFDC3BB22C03EED00B77841 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3BA22C03EED00B77841 /* ListTableViewController.swift */; };
+		3AFDC3BE22C0414A00B77841 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDC3BD22C0414A00B77841 /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3AFDC3B622C0398E00B77841 /* List+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Convenience.swift"; sourceTree = "<group>"; };
 		3AFDC3B822C03A1C00B77841 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		3AFDC3BA22C03EED00B77841 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		3AFDC3BD22C0414A00B77841 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				3AFDC3BA22C03EED00B77841 /* ListTableViewController.swift */,
+				3AFDC3BD22C0414A00B77841 /* ButtonTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				3AFDC3B722C0398E00B77841 /* List+Convenience.swift in Sources */,
 				3AFDC3BB22C03EED00B77841 /* ListTableViewController.swift in Sources */,
 				3AFDC3A422C037EC00B77841 /* Assessment2take2.xcdatamodeld in Sources */,
+				3AFDC3BE22C0414A00B77841 /* ButtonTableViewCell.swift in Sources */,
 				3AFDC39C22C037EC00B77841 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
