@@ -54,7 +54,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="jmo-bu-b1A">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hpO-I7-yPK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hpO-I7-yPK">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="96H-Hw-HJl" id="Iov-zT-G6L"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwJ-NN-ehq" userLabel="First Responder" sceneMemberID="firstResponder"/>
