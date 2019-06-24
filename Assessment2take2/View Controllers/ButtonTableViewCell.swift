@@ -31,5 +31,6 @@ class ButtonTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkedButtonTapped(_ sender: Any) {
+        delegate?.buttonCellButtonTapped(self)
     }
 }

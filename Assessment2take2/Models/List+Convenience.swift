@@ -11,9 +11,10 @@ import CoreData
 
 extension List {
     
-    @discardableResult
+    //@discardableResult
     convenience init(item: String, context: NSManagedObjectContext = CoreDataStack.managedObjectContext ) {
         self.init(context: context)
         self.item = item
+        self.isChecked = false
     }
 }

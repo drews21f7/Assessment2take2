@@ -38,6 +38,11 @@ class ListTableViewController: UITableViewController {
         present(alertController, animated: true)
     }
     // MARK: - Table view data source
+    
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return ListController.sharedInstance.fetchedResultsController.sections?.count ?? 0
+    }
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,10 +70,7 @@ class ListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let item = ListController.sharedInstance.fetchedResultsController.object(at: indexPath)
-            ListController.sharedInstance.delete(item: item)
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        ListController.sharedInstance.delete(item: item)
         }    
     }
 }
@@ -111,7 +113,7 @@ extension ListTableViewController: NSFetchedResultsControllerDelegate {
             tableView.reloadRows(at: [indexPath], with: .automatic)
 
         @unknown default:
-            <#fatalError()#>
+            fatalError()
         }
         
     }
