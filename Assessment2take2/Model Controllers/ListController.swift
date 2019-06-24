@@ -18,7 +18,7 @@ class ListController {
     init() {
         
         let request: NSFetchRequest<List> = List.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "isChecked", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "isChecked", ascending: false)]
         let resultsController: NSFetchedResultsController<List> = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataStack.managedObjectContext, sectionNameKeyPath: "Checked", cacheName: nil)
         fetchedResultsController = resultsController
         

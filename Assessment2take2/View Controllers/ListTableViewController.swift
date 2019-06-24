@@ -11,9 +11,11 @@ import CoreData
 
 class ListTableViewController: UITableViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ListController.sharedInstance.fetchedResultsController.delegate = self
+        //updateViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -21,11 +23,21 @@ class ListTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
+//    var item: List?
+//
+//    func updateViews() {
+//        guard let item = item, isViewLoaded else {return}
+//        cell.delegate.itemLabel.text = item.item
+//
+//    }
+
 
     @IBAction func addButtonTapped(_ sender: Any) {
-        let alertController = UIAlertController(title: "Add item", message: "What do you want to add?", preferredStyle: .alert)
+        
+            let alertController = UIAlertController(title: "Add item", message: "What do you want to add?", preferredStyle: .alert)
         alertController.addTextField { (_) in
-            
+
         }
         let addItem = UIAlertAction(title: "Add", style: .default) { (_) in
             guard let itemName = alertController.textFields?[0].text else { return }
@@ -34,8 +46,9 @@ class ListTableViewController: UITableViewController {
         let dismissAlert = UIAlertAction(title: "Dismiss", style: .destructive)
         alertController.addAction(addItem)
         alertController.addAction(dismissAlert)
-        
+
         present(alertController, animated: true)
+        setNeedsStatusBarAppearanceUpdate()
     }
     // MARK: - Table view data source
     
@@ -116,5 +129,21 @@ extension ListTableViewController: NSFetchedResultsControllerDelegate {
             fatalError()
         }
         
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        
+        switch type {
+        case .insert:
+            tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+        case .delete:
+            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+        case .move:
+            break
+        case .update:
+            break
+        @unknown default:
+            fatalError()
+        }
     }
 }
