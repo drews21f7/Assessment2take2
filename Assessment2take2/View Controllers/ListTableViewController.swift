@@ -23,14 +23,6 @@ class ListTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
-    
-//    var item: List?
-//
-//    func updateViews() {
-//        guard let item = item, isViewLoaded else {return}
-//        cell.delegate.itemLabel.text = item.item
-//
-//    }
 
 
     @IBAction func addButtonTapped(_ sender: Any) {
@@ -48,7 +40,7 @@ class ListTableViewController: UITableViewController {
         alertController.addAction(dismissAlert)
 
         present(alertController, animated: true)
-        setNeedsStatusBarAppearanceUpdate()
+        //setNeedsStatusBarAppearanceUpdate()
     }
     // MARK: - Table view data source
     
